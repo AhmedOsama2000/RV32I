@@ -26,14 +26,13 @@ module ID_EX_REG #(
 	input wire [4:0]      	 if_id_rs2,
 	input wire [4:0]      	 if_id_rd,
 	input wire [4:0]         mem_wb_rd,
-	input wire               ireg_mem_wb_wr,
+	input wire               reg_mem_wb_wr,
 	// ALU srcs
 	input wire       		 Sub_I,
 	input wire 		 		 ALU_Src1_Sel_I,
 	input wire 		 		 ALU_Src2_Sel_I,
 	input wire [2:0]         ALU_Ctrl_I,
 	// Memory srcs
-	input wire               store_src_I,
 	input wire 		         MEM_Wr_En_I,
 	////////////////////////// OUTPUT //////////////////////
 	// PC src
@@ -115,7 +114,7 @@ always @(posedge CLK,negedge rst_n) begin
 end
 
 always @(*) begin
-	if ((mem_wb_rd == if_id_rs1) && ireg_mem_wb_wr) begin
+	if ((mem_wb_rd == if_id_rs1) && reg_mem_wb_wr) begin
 		passed_rs1 = mem_wb_data;
 	end
 	else begin
@@ -123,7 +122,7 @@ always @(*) begin
 	end
 end
 always @(*) begin
-	if ((mem_wb_rd == if_id_rs2) && ireg_mem_wb_wr) begin
+	if ((mem_wb_rd == if_id_rs2) && reg_mem_wb_wr) begin
 		passed_rs2 = mem_wb_data;
 	end
 	else begin

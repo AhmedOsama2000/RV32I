@@ -241,7 +241,7 @@ ID_EX_REG ID_EX_Register (
 	.if_id_rs1(instr_if_id[19:15]),
 	.if_id_rs2(instr_if_id[24:20]),
 	.if_id_rd(instr_if_id[11:7]),
-	.ireg_mem_wb_wr(reg_wr_en_mem_wb),
+	.reg_mem_wb_wr(reg_wr_en_mem_wb),
 	// ALU srcs
 	.Sub_I(Sub),
 	.ALU_Src1_Sel_I(alu_src1_sel),

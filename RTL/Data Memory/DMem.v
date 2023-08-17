@@ -7,7 +7,7 @@ module DMem #(
 	input  wire        	    Mem_Wr_En,
 	input  wire [XLEN-1:0]  Data_In,
 	input  wire [XLEN-1:0]  Addr,
-	output wire  [XLEN-1:0] Data_Out
+	output wire [XLEN-1:0]  Data_Out
 );
 
 reg [31:0] DMEM [0:63];

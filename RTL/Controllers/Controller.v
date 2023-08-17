@@ -19,9 +19,6 @@ module Control_Unit #(
 	output wire 	  ALU_Src1_Sel,
 	output wire 	  ALU_Src2_Sel,
 	output wire       Sub,
-	// Floating ALU Source signals
-	output wire       FALU_Src1_Sel,
-	output wire       fpu_ins,
 	// PC signals
 	output wire       EN_PC,
 	output wire       Branch,

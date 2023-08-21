@@ -26,9 +26,6 @@ wire   rs2_zero;
 // Stall The Core signal
 reg [1:0] stall_core;
 
-reg NS;
-reg CS;
-
 assign {PC_Stall,NOP_Ins} = stall_core; 
 
 assign rs1_zero = (IF_ID_rs1 == 5'b0)? 1'b1:1'b0;

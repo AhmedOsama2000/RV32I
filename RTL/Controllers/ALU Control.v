@@ -67,13 +67,13 @@ always @(*) begin
 			ALU_Ctrl = 3'b000;
 		end
 		else if (Funct3 == 3'b111 || Funct3 == 3'b100 || Funct3 == 3'b110) begin
-			ALU_Ctrl = 3'b100;
+			ALU_Ctrl = 3'b010;
 		end
 		else if (Funct3 == 3'b001 || Funct3 == 3'b101) begin
-			ALU_Ctrl = 3'b101;
+			ALU_Ctrl = 3'b011;
 		end
 		else if (Funct3 == 3'b010 || Funct3 == 3'b011) begin
-			ALU_Ctrl = 3'b011;
+			ALU_Ctrl = 3'b001;
 		end
 		else begin
 			ALU_Ctrl = 3'b111;
